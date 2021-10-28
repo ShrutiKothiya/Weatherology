@@ -1,6 +1,6 @@
 const APIkey = "ad6906a7db14d056c528df88473db7a3";
 
-const btn = document.querySelector(".search-btn");
+const btn = document.querySelector("#search-button");
 
 btn.addEventListener("click", () => {
 	const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

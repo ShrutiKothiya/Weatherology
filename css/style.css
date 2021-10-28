@@ -6,32 +6,27 @@ body {
 }
 
 .title {
-  font-size: 65px;
+  margin-top: 10%;
+  font-size: 250%;
 }
 
-.city-name-input {
-  width: 77%;
-  height: 25px;
+.colorBG {
+  background-color: skyblue;
+}
+
+#temp-group {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  border: 3px solid darkblue; 
+}
+
+#cityNameInput {
+  width: 90%;
+  height: 20%;
   text-align: center;
-  font-size: 20px;
-  background-color: skyblue;
 }
 
-.search-btn {
-  width: 10%;
-  font-size: 20px;
-  border-radius: 50%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-top: 1%;
-  background-color: skyblue;
-}
-
-.temp-section {
-  border: 2px solid darkblue;
-  width: 75%;
-  margin-top: 1%;
-  margin-left: 12.5%;
-  align-content: center;
-  background-color: skyblue;
+#search-button {
+  margin-top: 2%;
 }
