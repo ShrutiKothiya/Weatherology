@@ -68,6 +68,18 @@ main h3 {
   cursor: pointer;
 }
 
+.temp-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.temp-section {
+  border-radius: 10px;
+  padding: 25px;
+  background: #ececec;
+  margin-bottom: 2rem;
+}
+
 .temp-section .weather-icon {
   width: 100px;
   height: 100px;
