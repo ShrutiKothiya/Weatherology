@@ -1,93 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  letter-spacing: 0.45px;
-}
-
 body {
-  height: 100vh;
-  color: #303030;
-  background: #fefefe;
+  background-color: deepskyblue;
+  color: darkslategray;
+  text-align: center;
+  align-items: center;
 }
 
-main {
-  position: relative;
-  padding: 1rem;
+.title {
+  margin-top: 10%;
+  font-size: 250%;
 }
 
-main h1 {
-  font-size: 2.5rem;
+.colorBG {
+  background-color: skyblue;
 }
 
-main h2 {
-  font-size: 1.85rem;
+#temp-group {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  border: 3px solid darkblue; 
 }
 
-main h3 {
-  font: 1.15rem;
+#cityNameInput {
+  width: 90%;
+  height: 20%;
+  text-align: center;
 }
 
-.container {
-  margin: auto;
-  max-width: 542px;
+#search-button {
+  margin-top: 2%;
 }
-
-.container header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 3rem;
-}
-
-.container header .input-group .city-name-input {
-  padding: 0.5rem;
-  border: 1px solid rgba(48, 48, 48, 0.2);
-  border-radius: 0.25rem;
-}
-
-.container header .input-group .search-btn {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  background: cornflowerblue;
-  color: #fefefe;
-  border-radius: 0.25rem;
-  padding: 0.55rem 1rem;
-  cursor: pointer;
-}
-
-.temp-section .weather-icon {
-  width: 100px;
-  height: 100px;
-}
-
-.temp-section .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.temp-section .wrapper .temperature {
-  font-size: 3.5rem;
-  margin-right: 1rem;
-}
-
-.temp-section .wrapper .city-details .time-and-date {
-  font-size: 0.9rem;
-}
-/*# sourceMappingURL=style.css.map */
