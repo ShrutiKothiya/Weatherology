@@ -6,6 +6,16 @@ searchBtn.addEventListener("click", () => {
 	searchWeather();
 });
 
+cityInput.addEventListener("keyup", (event) => {
+	// Number 13 is the "Enter" key on the keyboard
+	if (event.keyCode == 13) {
+		// Cancel the default action
+		event.preventDefault();
+		// Trigger the search button element with a click
+		searchBtn.click();
+	}
+});
+
 // search weather
 function searchWeather() {
 	// URL of API
