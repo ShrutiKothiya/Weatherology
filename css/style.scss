@@ -61,6 +61,11 @@ main {
 				border-radius: 0.25rem;
 				padding: 0.55rem 1rem;
 				cursor: pointer;
+
+				&.disabled {
+					pointer-events: none;
+					opacity: 0.5;
+				}
 			}
 		}
 	}

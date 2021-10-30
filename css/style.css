@@ -68,6 +68,11 @@ main h3 {
   cursor: pointer;
 }
 
+.container header .input-group .search-btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .temp-section .weather-icon {
   width: 100px;
   height: 100px;

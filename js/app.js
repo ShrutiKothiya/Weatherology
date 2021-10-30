@@ -6,6 +6,24 @@ searchBtn.addEventListener("click", () => {
 	searchWeather();
 });
 
+cityInput.addEventListener("keyup", (event) => {
+	// Number 13 is the "Enter" key on the keyboard
+	if (event.keyCode == 13) {
+		// Cancel the default action
+		event.preventDefault();
+		// Trigger the search button element with a click
+		searchBtn.click();
+	}
+});
+
+cityInput.addEventListener("input", () => {
+	if (!cityInput.value) {
+		searchBtn.classList.add("disabled");
+	} else {
+		searchBtn.classList.remove("disabled");
+	}
+});
+
 // search weather
 function searchWeather() {
 	// URL of API
@@ -28,7 +46,10 @@ function searchWeather() {
 			hours = hours % 12 || 12;
 
 			const tempSection = document.querySelector(".temp-section");
-			tempSection.innerHTML = `
+			if (!cityInput.value) {
+				window.alert("Enter City Name");
+			} else {
+				tempSection.innerHTML = `
 			<div class="temp-group">
 				<div class="city-details">
 					<p class="time-and-date">${hours}:${minutes} ${ampm}, ${month} ${day}</p>
@@ -40,5 +61,6 @@ function searchWeather() {
 				</div>
 			</div>
 			`;
+			}
 		});
 }
