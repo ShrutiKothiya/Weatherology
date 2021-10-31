@@ -1,5 +1,5 @@
 $lightColor: #fefefe;
-$darkColor: #303030;
+$darkColor: #001220;
 $blueColor: #9ac9ff;
 $redColor: #ff9d9d;
 $yellowColor: #ffe77b;
@@ -15,23 +15,17 @@ $fontColor: #fafafa;
 
 body {
 	height: 100vh;
-	color: $darkColor;
-	background: $lightColor;
+	color: $lightColor;
+	background: url(/assets/image/layered-waves-haikei.svg), no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 main {
 	position: relative;
 	padding: 1rem;
-	h1 {
-		font-size: 2.5rem;
-	}
-
-	h2 {
-		font-size: 1.85rem;
-	}
-
-	h3 {
-		font: 1.15rem;
+	:is(h1, h2, h3) {
+		font-family: "Righteous", cursive;
 	}
 }
 
@@ -40,52 +34,109 @@ main {
 	max-width: 542px;
 
 	header {
+		margin-top: 2rem;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 3rem;
+		@media screen and (max-width: 512px) {
+			margin-top: 1rem;
+			justify-content: center;
+			flex-direction: column;
+			.title {
+				margin-bottom: 2rem;
+			}
+			.input-group {
+				margin: auto;
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				.city-name-input {
+					width: 60vw;
+				}
+			}
+		}
+		.title {
+			text-transform: uppercase;
+		}
 
 		.input-group {
 			.city-name-input {
 				padding: 0.5rem;
 				border: 1px solid rgba($darkColor, 0.2);
 				border-radius: 0.25rem;
+				margin-right: 0.5rem;
 			}
 
 			.search-btn {
 				appearance: none;
 				border: none;
-				background: cornflowerblue;
-				color: $lightColor;
+				background: $yellowColor;
+				color: $darkColor;
+				font-weight: 600;
 				border-radius: 0.25rem;
 				padding: 0.55rem 1rem;
 				cursor: pointer;
+
+				&.disabled {
+					pointer-events: none;
+					opacity: 0.5;
+				}
 			}
+		}
+	}
+
+	.alert {
+		text-align: center;
+		height: 50vh;
+		display: grid;
+		place-items: center;
+		&.alert-disabled {
+			display: none;
+		}
+		p {
+			background: $redColor;
+			color: $darkColor;
+			padding: 1rem 2rem;
+			border-radius: 0.1rem;
 		}
 	}
 }
 
 // temperature section
 .temp-section {
-	.weather-icon {
-		width: 100px;
-		height: 100px;
+	@media screen and (max-width: 512px) {
+		text-align: center;
+		.temp-wrapper {
+			justify-content: center;
+			text-align: left;
+		}
+	}
+	.city-details {
+		.time-and-date {
+			margin-bottom: 0.5rem;
+			font-size: 0.9rem;
+		}
+		.city-name {
+			font-size: 2.25rem;
+		}
 	}
 
-	.wrapper {
+	.temp-wrapper {
 		display: flex;
 		align-items: center;
 
-		.temperature {
-			font-size: 3.5rem;
+		.wrapper {
 			margin-right: 1rem;
-		}
-
-		.city-details {
-			.time-and-date {
+			.description {
 				font-size: 0.9rem;
+				text-transform: capitalize;
 			}
+		}
+		.weather-icon {
+			width: 110px;
+			height: 110px;
 		}
 	}
 }
